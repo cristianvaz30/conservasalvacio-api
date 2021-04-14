@@ -18,4 +18,9 @@ public class HelloWorldController {
         return "Kbza sapeee";
     }
 
+    @GetMapping(path="/hello-kbza")
+    public String helloKbza(){
+        return "Hello Kbza";
+    }
+
 }
