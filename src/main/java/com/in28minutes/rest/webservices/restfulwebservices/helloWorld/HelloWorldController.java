@@ -15,7 +15,7 @@ public class HelloWorldController {
     //method - "Hello World"
     @GetMapping(path="/hello-world")
     public String helloWorld(){
-        return "Hello World";
+        return "Kbza sapeee";
     }
 
 }
