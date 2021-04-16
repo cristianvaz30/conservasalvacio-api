@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 //Controller
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class HelloWorldController {
 
@@ -15,12 +15,17 @@ public class HelloWorldController {
     //method - "Hello World"
     @GetMapping(path="/hello-world")
     public String helloWorld(){
-        return "Kbza sapeee";
+        return "Hello World";
     }
 
-    @GetMapping(path="/hello-kbza")
-    public String helloKbza(){
-        return "Hello Kbza";
+    @GetMapping(path="/hello-world-bean")
+    public HelloWorldBean helloWorldBean(){
+        return new HelloWorldBean("Hello World--changedd");
+    }
+
+    @GetMapping(path="/hello-world-bean/path-variable/{name}")
+    public HelloWorldBean helloWorldPathVariable(@PathVariable String name){
+        return new HelloWorldBean(String.format("Hello World, %s",name));
     }
 
 }
