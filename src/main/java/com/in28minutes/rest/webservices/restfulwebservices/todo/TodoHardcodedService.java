@@ -11,11 +11,19 @@ public class TodoHardcodedService {
     private static List<Todo> todos = new ArrayList();
     private static int idCounter = 0;
     static{
-        todos.add(new Todo(++idCounter,"Mermelada de Ananá","Learn To Dance",150));
-        todos.add(new Todo(++idCounter,"Dulce de Zapallo","Learn about Microservices",220));
-        todos.add(new Todo(++idCounter,"Morrones Agridulces","Learn about Angular",300));
+        todos.add(new Todo(++idCounter,"Mermelada de Banana","https://i.imgur.com/rM2U4R4.jpg",150));
+        todos.add(new Todo(++idCounter,"Mermelada de Tomate","https://i.imgur.com/uJvB9zS.jpg",150));
+        todos.add(new Todo(++idCounter,"Durazno en Almibar","https://i.imgur.com/8VA99vm.jpg",300));
+        todos.add(new Todo(++idCounter,"Pickles","https://i.imgur.com/kYq7QhW.jpg",300));
+        todos.add(new Todo(++idCounter,"Dulce de Leche","https://i.imgur.com/eKxAPe5.jpg",150));
     }
-
+/*
+    "https://i.imgur.com/rM2U4R4.jpg" MERMELADA DE BANANA
+    "https://i.imgur.com/uJvB9zS.jpg" MERMELADA DE TOMATE
+    "https://i.imgur.com/8VA99vm.jpg" DURAZNO EN ALMIBAR
+    "https://i.imgur.com/kYq7QhW.jpg" PICKLES
+    "https://i.imgur.com/eKxAPe5.jpg" DULCE DE LECHE
+*/
     public Todo save(Todo todo){
         if (todo.getId()==-1){
             todo.setId(++idCounter);
